@@ -12,6 +12,19 @@
   &__input {
     border:  none;
     background: inherit;
+    width: 100%;
     @include font-style(m);
+  }
+}
+.explore {
+  background: $clr-bg-sec;
+  text-align: center;
+  &__heading {
+    padding: 0 55px;
+    @include font-style(xl);
+  }
+  &__p {
+    margin: 20px 0;
+    @include font-style(l, 100);
   }
 }

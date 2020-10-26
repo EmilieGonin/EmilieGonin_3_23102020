@@ -6,6 +6,12 @@
   @if ($size == "title") {
     font-family: $font-title;
   }
+  @if ($size == "xl") {
+    font-size: 25px;
+  }
+  @if ($size == "l") {
+    font-size: 18px;
+  }
   @if ($size == "m") {
     font-size: 15px;
   }

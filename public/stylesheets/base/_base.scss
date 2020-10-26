@@ -6,21 +6,19 @@ html {
 *, *::before, *::after {
   box-sizing: inherit;
 }
-body, section {
+body, section, h2, h1 {
   margin: 0 auto;
 }
 body {
   width: 100%;
 }
 section {
-  max-width: $tablet-width;
+  //max-width: $tablet-width;
+  padding: 45px 0;
 }
 input {
   outline: none;
 }
 a {
   text-decoration: none;
-}
-h1, h2 {
-  display: inline;
 }

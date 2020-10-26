@@ -1,0 +1,11 @@
+//main:../main.scss
+.btn {
+  display: inline-block;
+  background: linear-gradient($clr-sec, $clr-pri);
+  color: $clr-btn;
+  width: 215px;
+  line-height: 50px;
+  border-radius: 30px;
+  margin: 10px;
+  @include minblur-shadow;
+}
