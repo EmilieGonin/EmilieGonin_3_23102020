@@ -1,0 +1,17 @@
+//main:../main.scss
+.search {
+  background: $clr-form;
+  display: flex;
+  padding: 15px 0 15px 80px;
+  &__label {
+    margin: 0 20px;
+    &--hidden {
+      display: none;
+    }
+  }
+  &__input {
+    border:  none;
+    background: inherit;
+    @include font-style(m);
+  }
+}

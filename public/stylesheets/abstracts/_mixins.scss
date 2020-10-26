@@ -1,7 +1,15 @@
 //main:../main.scss
-@mixin heading-style {
-  font-family: $font-title;
-}
 @mixin minblur-shadow {
-  box-shadow: 0 2px 5px lightgrey;
+  box-shadow: 0 1px 5px #8D8D8D;
+}
+@mixin font-style($size: regular, $weight: normal) {
+  @if ($size == "title") {
+    font-family: $font-title;
+  }
+  @if ($size == "m") {
+    font-size: 15px;
+  }
+  @if ($weight != "normal") {
+    font-weight: $weight;
+  }
 }

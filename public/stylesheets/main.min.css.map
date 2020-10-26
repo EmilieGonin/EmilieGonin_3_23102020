@@ -1,0 +1,28 @@
+{
+	"version": 3,
+	"file": "main.min.css",
+	"sources": [
+		"main.scss",
+		"abstracts/_variables.scss",
+		"abstracts/_functions.scss",
+		"abstracts/_mixins.scss",
+		"base/_base.scss",
+		"base/_typography.scss",
+		"layout/_header.scss",
+		"layout/_footer.scss",
+		"pages/_home.scss"
+	],
+	"sourcesContent": [
+		"@charset \"UTF-8\";\n\n@import\n  'abstracts/variables',\n  'abstracts/functions',\n  'abstracts/mixins',\n  'base/base',\n  'base/typography',\n  'layout/header',\n  'layout/footer',\n  'pages/home';\n",
+		"//main:../main.scss\n$font-regular: 'Roboto', sans-serif;\n$font-title: 'Shrikhand', cursive;\n\n$clr-pri: #9356DC;\n$clr-sec: #FF79DA;\n$clr-ter: #99E2D0;\n$clr-ico: #8D8D8D;\n\n$clr-bg: #FFFFFF;\n$clr-bg-sec: #F6F6F6;\n\n$clr-form: #EAEAEA;\n\n$mobile-width: 375px;\n$tablet-width: 768px;\n",
+		"//main:../main.scss\n",
+		"//main:../main.scss\n@mixin minblur-shadow {\n  box-shadow: 0 1px 5px #8D8D8D;\n}\n@mixin font-style($size: regular, $weight: normal) {\n  @if ($size == \"title\") {\n    font-family: $font-title;\n  }\n  @if ($size == \"m\") {\n    font-size: 15px;\n  }\n  @if ($weight != \"normal\") {\n    font-weight: $weight;\n  }\n}\n",
+		"//main:../main.scss\n\nhtml {\n  box-sizing: border-box;\n}\n*, *::before, *::after {\n  box-sizing: inherit;\n}\nbody, section {\n  margin: 0 auto;\n}\nbody {\n  width: 100%;\n}\nsection {\n  max-width: $tablet-width;\n}\ninput {\n  outline: none;\n}\na {\n  text-decoration: none;\n}\nh1, h2 {\n  display: inline;\n}\n",
+		"//main:../main.scss\n@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap');\n\nbody, input {\n  font-family: $font-regular;\n}\n",
+		"//main:../main.scss\n.header {\n  height: 65px;\n  padding-top: 5px;\n  text-align: center;\n  @include minblur-shadow;\n  z-index: 2;\n  position: relative;\n  &__heading {\n    line-height: 65px;\n    @include font-style(title);\n  }\n}\n",
+		"//main:../main.scss\n",
+		"//main:../main.scss\r\n.search {\r\n  background: $clr-form;\r\n  display: flex;\r\n  padding: 15px 0 15px 80px;\r\n  &__label {\r\n    margin: 0 20px;\r\n    &--hidden {\r\n      display: none;\r\n    }\r\n  }\r\n  &__input {\r\n    border:  none;\r\n    background: inherit;\r\n    @include font-style(m);\r\n  }\r\n}\r\n"
+	],
+	"names": [],
+	"mappings": "AKCA,OAAO,CAAC,oFAAI,CDCZ,AAAA,IAAI,AAAC,CACH,UAAU,CAAE,UAAU,CACvB,AACD,AAAA,CAAC,CAAE,CAAC,AAAA,QAAQ,CAAE,CAAC,AAAA,OAAO,AAAC,CACrB,UAAU,CAAE,OAAO,CACpB,AACD,AAAA,IAAI,CAAE,OAAO,AAAC,CACZ,MAAM,CAAE,MAAM,CACf,AACD,AAAA,IAAI,AAAC,CACH,KAAK,CAAE,IAAI,CACZ,AACD,AAAA,OAAO,AAAC,CACN,SAAS,CHAI,KAAK,CGCnB,AACD,AAAA,KAAK,AAAC,CACJ,OAAO,CAAE,IAAI,CACd,AACD,AAAA,CAAC,AAAC,CACA,eAAe,CAAE,IAAI,CACtB,AACD,AAAA,EAAE,CAAE,EAAE,AAAC,CACL,OAAO,CAAE,MAAM,CAChB,ACtBD,AAAA,IAAI,CAAE,KAAK,AAAC,CACV,WAAW,CJHE,QAAQ,CAAE,UAAU,CIIlC,ACJD,AAAA,OAAO,AAAC,CACN,MAAM,CAAE,IAAI,CACZ,WAAW,CAAE,GAAG,CAChB,UAAU,CAAE,MAAM,CHFlB,UAAU,CAAE,iBAAiB,CGI7B,OAAO,CAAE,CAAC,CACV,QAAQ,CAAE,QAAQ,CAKnB,AAJE,AAAD,gBAAU,AAAC,CACT,WAAW,CAAE,IAAI,CHHjB,WAAW,CFJF,WAAW,CAAE,OAAO,CKS9B,AEVH,AAAA,OAAO,AAAC,CACN,UAAU,CPUD,OAAO,COThB,OAAO,CAAE,IAAI,CACb,OAAO,CAAE,gBAAgB,CAY1B,AAXE,AAAD,cAAQ,AAAC,CACP,MAAM,CAAE,MAAM,CAIf,AAHE,AAAD,sBAAS,AAAC,CACR,OAAO,CAAE,IAAI,CACd,AAEF,AAAD,cAAQ,AAAC,CACP,MAAM,CAAG,IAAI,CACb,UAAU,CAAE,OAAO,CLJnB,SAAS,CAAE,IAAI,CKMhB"
+}

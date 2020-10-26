@@ -6,8 +6,10 @@ html {
 *, *::before, *::after {
   box-sizing: inherit;
 }
-body {
+body, section {
   margin: 0 auto;
+}
+body {
   width: 100%;
 }
 section {
