@@ -8,6 +8,6 @@
   @include minblur-shadow;
   &__heading {
     line-height: 65px;
-    @include font-style(title);
+    @include font-style($xl-title);
   }
 }

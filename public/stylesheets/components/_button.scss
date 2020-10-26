@@ -11,6 +11,7 @@
   line-height: 50px;
   cursor: pointer;
   @include minblur-shadow;
+  @include font-style(regular, $medium);
   &::after {
     content: "";
     @include position(absolute, 0);

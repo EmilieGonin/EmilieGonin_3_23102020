@@ -14,7 +14,7 @@
     width: 100%;
     border:  none;
     background: inherit;
-    @include font-style(m);
+    @include font-style($m);
   }
 }
 .explore {
@@ -22,10 +22,10 @@
   text-align: center;
   &__heading {
     padding: 0 55px;
-    @include font-style(xl);
+    @include font-style($xl, $bold);
   }
   &__p {
-    margin: 20px 0;
-    @include font-style(l, 100);
+    margin: 15px 0 20px 0;
+    @include font-style($l, $light);
   }
 }

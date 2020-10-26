@@ -3,21 +3,11 @@
   box-shadow: 0 1px 5px #8D8D8D;
 }
 @mixin font-style($size: regular, $weight: normal) {
-  @if ($size == "title") {
+  @if ($size == $xl-title or $size == $s-title) {
     font-family: $font-title;
   }
-  @if ($size == "xl") {
-    font-size: 25px;
-  }
-  @if ($size == "l") {
-    font-size: 18px;
-  }
-  @if ($size == "m") {
-    font-size: 15px;
-  }
-  @if ($weight != "normal") {
-    font-weight: $weight;
-  }
+  font-size: $size;
+  font-weight: $weight;
 }
 @mixin position($position, $top, $right: $top, $bottom: $top, $left: $right) {
   position: $position;
