@@ -1,1 +1,7 @@
 //main:../main.scss
+@mixin heading-style {
+  font-family: $font-title;
+}
+@mixin minblur-shadow {
+  box-shadow: 0 2px 5px lightgrey;
+}
