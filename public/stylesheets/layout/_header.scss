@@ -1,11 +1,11 @@
 //main:../main.scss
 .header {
+  position: relative;
+  z-index: 2;
   height: 65px;
   padding-top: 5px;
   text-align: center;
   @include minblur-shadow;
-  z-index: 2;
-  position: relative;
   &__heading {
     line-height: 65px;
     @include font-style(title);

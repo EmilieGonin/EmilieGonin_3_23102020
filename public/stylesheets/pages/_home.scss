@@ -1,18 +1,19 @@
 //main:../main.scss
 .search {
-  background: $clr-form;
   display: flex;
   padding: 15px 0 15px 80px;
+  background: $clr-form;
   &__label {
     margin: 0 20px;
+    cursor: pointer;
     &--hidden {
       display: none;
     }
   }
   &__input {
+    width: 100%;
     border:  none;
     background: inherit;
-    width: 100%;
     @include font-style(m);
   }
 }

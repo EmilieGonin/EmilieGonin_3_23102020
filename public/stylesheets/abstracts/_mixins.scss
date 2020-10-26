@@ -19,3 +19,10 @@
     font-weight: $weight;
   }
 }
+@mixin position($position, $top, $right: $top, $bottom: $top, $left: $right) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}

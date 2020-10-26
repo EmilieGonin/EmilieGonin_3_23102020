@@ -1,11 +1,28 @@
 //main:../main.scss
 .btn {
+  position: relative;
+  z-index: 1;
   display: inline-block;
+  width: 215px;
+  margin: 10px;
+  border-radius: $btn-radius;
   background: linear-gradient($clr-sec, $clr-pri);
   color: $clr-btn;
-  width: 215px;
   line-height: 50px;
-  border-radius: 30px;
-  margin: 10px;
+  cursor: pointer;
   @include minblur-shadow;
+  &::after {
+    content: "";
+    @include position(absolute, 0);
+    z-index: -1;
+    opacity: 0;
+    border-radius: $btn-radius;
+    background: linear-gradient($clr-pri, $clr-sec);
+    transition: all 300ms ease-out;
+  }
+  &:hover {
+    &::after {
+      opacity: 1;
+    }
+  }
 }
