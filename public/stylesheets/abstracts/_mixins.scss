@@ -1,6 +1,10 @@
 //main:../main.scss
-@mixin minblur-shadow {
-  box-shadow: 0 1px 5px #8D8D8D;
+@mixin position($position, $top, $right: $top, $bottom: $top, $left: $right) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
 }
 @mixin font-style($size: regular, $weight: normal) {
   @if ($size == $xl-title or $size == $s-title) {
@@ -9,10 +13,11 @@
   font-size: $size;
   font-weight: $weight;
 }
-@mixin position($position, $top, $right: $top, $bottom: $top, $left: $right) {
-  position: $position;
-  top: $top;
-  right: $right;
-  bottom: $bottom;
-  left: $left;
+@mixin minblur-shadow {
+  box-shadow: 0 1px 5px #8D8D8D;
+}
+@mixin tablet-only {
+  @media screen and (min-width: $tablet-width) {
+    @content;
+  }
 }

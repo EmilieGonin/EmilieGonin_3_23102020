@@ -1,1 +1,34 @@
 //main:../main.scss
+.footer {
+  background: $clr-footer;
+  color: $clr-white;
+  padding: 25px;
+  &__heading {
+    @include font-style($s-title);
+    @include tablet-only {
+      text-align: center;
+    }
+  }
+  &__links {
+    margin-top: 10px;
+    line-height: 25px;
+    @include font-style($m);
+    @include tablet-only {
+      display: flex;
+      justify-content: center;
+    }
+    &--with-icon {
+      display: flex;
+      align-items: center;
+      & svg {
+        min-width: 25px;
+        margin-right: 5px;
+      }
+    }
+    & li {
+      @include tablet-only {
+        margin: 0 10px;
+      }
+    }
+  }
+}
