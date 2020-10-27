@@ -16,8 +16,21 @@
 @mixin minblur-shadow {
   box-shadow: 0 1px 5px #8D8D8D;
 }
+@mixin blur-shadow($x, $y, $blur, $color) {
+  box-shadow: $x $y $blur darken($color, 15%);
+}
+@mixin mobile-tablet-only {
+  @media screen and (max-width: $tablet-width) {
+    @content;
+  }
+}
 @mixin tablet-only {
   @media screen and (min-width: $tablet-width) {
+    @content;
+  }
+}
+@mixin laptop-only {
+  @media screen and (min-width: $laptop-width) {
     @content;
   }
 }

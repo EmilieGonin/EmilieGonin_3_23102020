@@ -17,15 +17,47 @@
     @include font-style($m);
   }
 }
-.explore {
-  background: $clr-bg-sec;
+.operation {
+  display: flex;
+  align-items: center;
   text-align: center;
-  &__heading {
-    padding: 0 55px;
-    @include font-style($xl, $bold);
+  width: 320px;
+  height: 75px;
+  margin: 10px auto;
+  border-radius: 25px;
+  background: $clr-bg-sec;
+  @include blur-shadow(0px, 5px, 15px, $clr-bg-sec);
+  @include laptop-only {
+    margin: 30px;
   }
-  &__p {
-    margin: 15px 0 20px 0;
-    @include font-style($l, $light);
+  &--first {
+    @include mobile-tablet-only {
+      margin-top: 30px;
+    }
+  }
+  &--alt {
+    background: fade-out($clr-pri, 0.85);
+  }
+  &__number {
+    transform: translateX(-15px);
+    width: 25px;
+    line-height: 25px;
+    border-radius: 20px;
+    background: $clr-pri;
+    color: $clr-white;
+    @include font-style($s);
+  }
+  &__icon {
+    min-width: 20px;
+    margin-left: 5px;
+    margin-right: 20px;
+    color: $clr-ico;
+    @include font-style($l, $bold);
+  }
+  &__icon--alt {
+    color: $clr-pri;
+  }
+  &__text {
+    @include font-style(regular, $medium);
   }
 }

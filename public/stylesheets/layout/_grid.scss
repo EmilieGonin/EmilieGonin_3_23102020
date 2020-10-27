@@ -1,0 +1,12 @@
+//main:../main.scss
+.flex {
+  display: flex;
+  align-items: center;
+  &--responsive-columns {
+    flex-direction: column;
+    @include laptop-only {
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+}
