@@ -1,0 +1,57 @@
+//main:../main.scss
+.card {
+  display: block;
+  position: relative;
+  width: $card-width;
+  margin: 10px;
+  border-radius: 15px;
+  overflow: hidden;
+  @include blur-shadow;
+  &--new::before {
+    content: "Nouveau";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 0 15px;
+    line-height: 30px;
+    background: $clr-ter;
+    color: darken($clr-ter, 40%);
+    @include font-style($s, $medium);
+  }
+  &__picture img {
+    width: $card-width;
+    height: $card-picture-height;
+    object-fit: cover;
+    -o-object-fit: cover;
+  }
+  &__text {
+    position: relative;
+    margin: 15px;
+  }
+  &__heading {
+    margin: 5px 0;
+  }
+  &__location {
+    margin: 5px 0;
+    @include font-style(regular, $light);
+  }
+  &__like {
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 2;
+    background: linear-gradient(black, blue);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+    @include font-style($xl);
+    &:hover {
+      transform: scale(1.5);
+    }
+  }
+  &__link {
+    @include position;
+  }
+}

@@ -18,6 +18,7 @@
   }
 }
 .operation {
+  transform: translateX(5px);
   display: flex;
   align-items: center;
   text-align: center;
@@ -28,12 +29,7 @@
   background: $clr-bg-sec;
   @include blur-shadow(0px, 5px, 15px, $clr-bg-sec);
   @include laptop-only {
-    margin: 30px;
-  }
-  &--first {
-    @include mobile-tablet-only {
-      margin-top: 30px;
-    }
+    margin: 10px 30px;
   }
   &--alt {
     background: fade-out($clr-pri, 0.85);

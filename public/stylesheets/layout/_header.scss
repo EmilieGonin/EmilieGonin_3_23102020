@@ -5,7 +5,7 @@
   height: 65px;
   padding-top: 5px;
   text-align: center;
-  @include minblur-shadow;
+  @include blur-shadow;
   &__heading {
     line-height: 65px;
     @include font-style($xl-title);

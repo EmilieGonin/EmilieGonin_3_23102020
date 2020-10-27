@@ -10,7 +10,7 @@
   color: $clr-btn;
   line-height: 50px;
   cursor: pointer;
-  @include minblur-shadow;
+  @include blur-shadow;
   @include font-style(regular, $medium);
   &::after {
     content: "";
@@ -18,8 +18,9 @@
     z-index: -1;
     opacity: 0;
     border-radius: $btn-radius;
-    background: linear-gradient($clr-pri, $clr-sec);
+    background: linear-gradient(lighten($clr-sec, 3%), lighten($clr-pri, 3%));
     transition: all 300ms ease-out;
+    @include blur-shadow(0, 1px, 20px, darken($clr-bg-sec, 5%));
   }
   &:hover {
     &::after {

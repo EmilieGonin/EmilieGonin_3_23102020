@@ -1,5 +1,5 @@
 //main:../main.scss
-@mixin position($position, $top, $right: $top, $bottom: $top, $left: $right) {
+@mixin position($position: absolute, $top: 0, $right: $top, $bottom: $top, $left: $right) {
   position: $position;
   top: $top;
   right: $right;
@@ -13,10 +13,7 @@
   font-size: $size;
   font-weight: $weight;
 }
-@mixin minblur-shadow {
-  box-shadow: 0 1px 5px #8D8D8D;
-}
-@mixin blur-shadow($x, $y, $blur, $color) {
+@mixin blur-shadow($x: 0, $y: 1px, $blur: 10px, $color: $clr-bg-sec) {
   box-shadow: $x $y $blur darken($color, 15%);
 }
 @mixin mobile-tablet-only {
