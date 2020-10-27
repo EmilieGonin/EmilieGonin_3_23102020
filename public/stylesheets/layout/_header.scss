@@ -6,6 +6,17 @@
   padding-top: 5px;
   text-align: center;
   @include blur-shadow;
+  &__arrow {
+    position: absolute;
+    left: 25px;
+    top: 0;
+    bottom: 0;
+    height: 65px;
+    @include font-style($l);
+    @include laptop-only {
+      @include font-style($xl);
+    }
+  }
   &__heading {
     line-height: 65px;
     @include font-style($xl-title);
