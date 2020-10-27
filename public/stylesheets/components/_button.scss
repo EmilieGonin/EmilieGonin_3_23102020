@@ -9,7 +9,6 @@
   background: linear-gradient($clr-sec, $clr-pri);
   color: $clr-btn;
   line-height: 50px;
-  cursor: pointer;
   @include blur-shadow;
   @include font-style(regular, $medium);
   &::after {
