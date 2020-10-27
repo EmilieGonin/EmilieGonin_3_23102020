@@ -8,9 +8,28 @@
     background: $clr-bg-sec;
   }
   &__heading {
-    padding: 0 20px;
+    padding: 0 $heading-padding;
     margin-bottom: 20px;
     @include font-style($xl, $bold);
+    @include laptop-hd-only {
+      max-width: 1440px;
+    }
+    &--card-responsive {
+      @include tablet-only {
+        max-width: ($card-width * 2) + ($heading-padding * 2);
+      }
+      @include laptop-only {
+        max-width: ($card-width * 3) + ($heading-padding * 2);
+      }
+      @include laptop-hd-only {
+        max-width: ($card-width * 4) + ($heading-padding * 2);
+      }
+    }
+    &--responsive-centered {
+      @include tablet-only {
+        text-align: center;
+      }
+    }
   }
   &__p {
     margin: 15px 0 20px 0;

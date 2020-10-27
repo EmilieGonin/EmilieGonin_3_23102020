@@ -31,3 +31,8 @@
     @content;
   }
 }
+@mixin laptop-hd-only {
+  @media screen and (min-width: $laptop-hd-width) {
+    @content;
+  }
+}
