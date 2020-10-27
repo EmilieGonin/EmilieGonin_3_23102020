@@ -36,20 +36,10 @@
     @include font-style(regular, $light);
   }
   &__like {
-    display: inline-block;
     position: absolute;
-    top: 10px;
+    top: 5px;
     right: 10px;
-    z-index: 2;
-    background: linear-gradient(black, blue);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    cursor: pointer;
-    @include font-style($xl);
-    &:hover {
-      transform: scale(1.5);
-    }
+    @include like-button;
   }
   &__link {
     @include position;
