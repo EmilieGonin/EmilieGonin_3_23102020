@@ -17,17 +17,17 @@
       display: flex;
       justify-content: center;
     }
+  }
+  &__link {
+    @include tablet-only {
+      margin: 0 10px;
+    }
     &--with-icon {
       display: flex;
       align-items: center;
       & svg {
         min-width: 25px;
         margin-right: 5px;
-      }
-    }
-    & li {
-      @include tablet-only {
-        margin: 0 10px;
       }
     }
   }
