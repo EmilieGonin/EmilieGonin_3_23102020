@@ -36,6 +36,16 @@
     @content;
   }
 }
+@mixin fullhd-only {
+  @media screen and (min-width: $fullhd-width) {
+    @content;
+  }
+}
+@mixin ultrahd-only {
+  @media screen and (min-width: $fullhd-width) {
+    @content;
+  }
+}
 @mixin like-button {
   z-index: 2;
   background: linear-gradient(black, blue);
