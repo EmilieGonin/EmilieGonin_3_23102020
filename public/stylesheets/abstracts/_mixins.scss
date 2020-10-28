@@ -6,7 +6,7 @@
   bottom: $bottom;
   left: $left;
 }
-@mixin font-style($size: regular, $weight: normal) {
+@mixin font-style($size: initial, $weight: normal) {
   @if ($size == $xl-title or $size == $l-title or $size == $s-title) {
     font-family: $font-title;
   }

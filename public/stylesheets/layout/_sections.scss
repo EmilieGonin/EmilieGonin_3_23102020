@@ -12,15 +12,15 @@
     background: $clr-bg;
   }
   &--menu {
-    padding: 0 0 45px 0;
+    padding: 0 0 20px 0;
+  }
+  &--btn {
+    padding: 20px 0 60px 0;
   }
   &__heading {
     padding: 0 $heading-padding;
     margin-bottom: 20px;
     @include font-style($xl, $bold);
-    @include laptop-hd-only {
-      max-width: 1440px;
-    }
     &--menu {
       position: relative;
       padding-bottom: 8px;
@@ -34,6 +34,9 @@
         width: 40px;
         height: 3px;
         background: $clr-ter;
+      }
+      @include laptop-hd-only {
+        max-width: 70%;
       }
     }
     &--card-responsive {

@@ -1,0 +1,69 @@
+//main:../main.scss
+.dishcard {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 93%;
+  height: 70px;
+  margin: auto;
+  margin-bottom: 15px;
+  border-radius: 20px;
+  overflow: hidden;
+  background: $clr-bg;
+  cursor: pointer;
+  @include blur-shadow;
+  @include laptop-hd-only {
+    max-width: 68%;
+  }
+  &__l-container {
+    display: flex;
+    height: inherit;
+    padding: 0 0 13px 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  &__r-container {
+    display: flex;
+    justify-content: flex-end;
+    height: inherit;
+    //width: 0px;
+    //transform: translateX(70px);
+  }
+  &__heading {
+    position: absolute;
+    top: 13px;
+    margin: 0;
+    @include font-style($l, $medium);
+  }
+  &__infos {
+    align-self: flex-end;
+    margin: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    @include font-style($m, $light);
+  }
+  &__price {
+    align-self: flex-end;
+    margin: 0 20px 10px 10px;
+    @include font-style($m, $medium);
+  }
+  &__added {
+    width: 0px;
+    line-height: 70px;
+    background: $clr-ter;
+    color: $clr-white;
+    text-align: center;
+    transform: translateX(60px);
+    transition: all 300ms ease-in;
+    @include font-style($l);
+  }
+  &__checkbox {
+    display: none;
+    &:checked + .dishcard__added {
+      //width: 60px;
+      //transform: translateX(0px);
+    }
+  }
+}

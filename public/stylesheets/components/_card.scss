@@ -3,7 +3,6 @@
   display: block;
   position: relative;
   width: $card-width;
-  //margin: 10px;
   border-radius: 15px;
   overflow: hidden;
   @include blur-shadow;
@@ -33,7 +32,7 @@
   }
   &__location {
     margin: 5px 0;
-    @include font-style(regular, $thin);
+    @include font-style(initial, $thin);
   }
   &__like {
     position: absolute;
