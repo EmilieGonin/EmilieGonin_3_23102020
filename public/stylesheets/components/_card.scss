@@ -33,7 +33,7 @@
   }
   &__location {
     margin: 5px 0;
-    @include font-style(regular, $light);
+    @include font-style(regular, $thin);
   }
   &__like {
     position: absolute;

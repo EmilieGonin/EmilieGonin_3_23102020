@@ -2,12 +2,13 @@
 .btn {
   position: relative;
   z-index: 1;
-  display: inline-block;
+  display: block;
   width: 215px;
-  margin: 10px;
+  margin: 10px auto;
   border-radius: $btn-radius;
   background: linear-gradient($clr-sec, $clr-pri);
   color: $clr-btn;
+  text-align: center;
   line-height: 50px;
   @include blur-shadow;
   @include font-style(regular, $medium);
