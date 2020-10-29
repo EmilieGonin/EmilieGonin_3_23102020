@@ -47,6 +47,7 @@
   }
 }
 @mixin like-button {
+  position: absolute;
   z-index: 2;
   background: linear-gradient(black, blue);
   background-clip: text;

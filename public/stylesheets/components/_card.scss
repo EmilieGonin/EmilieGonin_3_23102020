@@ -28,6 +28,7 @@
     margin: 15px;
   }
   &__heading {
+    position: relative;
     margin: 5px 0;
   }
   &__location {
@@ -35,7 +36,6 @@
     @include font-style(initial, $thin);
   }
   &__like {
-    position: absolute;
     top: 5px;
     right: 10px;
     @include like-button;
