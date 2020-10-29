@@ -5,6 +5,7 @@
   justify-content: space-between;
   align-items: center;
   width: 93%;
+  max-width: $menu-width;
   height: 70px;
   margin: auto;
   margin-bottom: 15px;
@@ -13,9 +14,6 @@
   background: $clr-bg;
   cursor: pointer;
   @include blur-shadow;
-  @include laptop-hd-only {
-    max-width: 68%;
-  }
   &__l-container {
     display: flex;
     height: inherit;

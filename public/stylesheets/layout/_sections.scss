@@ -20,6 +20,7 @@
   &__heading {
     padding: 0 $heading-padding;
     margin-bottom: 20px;
+    max-width: $menu-width + 20px;
     @include font-style($xl, $bold);
     &--menu {
       position: relative;
@@ -34,9 +35,6 @@
         width: 40px;
         height: 3px;
         background: $clr-ter;
-      }
-      @include laptop-hd-only {
-        max-width: 70%;
       }
     }
     &--home {
