@@ -25,6 +25,7 @@
     right: 0;
     background: linear-gradient($clr-pri, $clr-sec);
     background-clip: text;
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 0;
   }
