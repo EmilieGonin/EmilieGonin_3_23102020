@@ -5,11 +5,12 @@
   align-items: center;
   gap: 2px;
   z-index: 999;
+  position: fixed;
+  top: 0;
   width: 100%;
-  height: auto;
+  height: 100%;
   background: $clr-bg-sec;
   animation: 0s #{$load-random-num}s fadeout both;
-  @include position;
   &__circle {
     width: $load-size;
     height: $load-size;
