@@ -39,3 +39,10 @@ $thin: 100;
 $light: 300;
 $medium: 500;
 $bold: 700;
+
+//Loading spinner
+$load-size: 10px;
+$load-dur: 400ms;
+$load-num: 3;
+$load-delay: $load-dur / $load-num;
+$load-random-num: random(3);

@@ -1,0 +1,33 @@
+//main:../main.scss
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  z-index: 999;
+  width: 100%;
+  height: auto;
+  background: $clr-bg-sec;
+  animation: 0s #{$load-random-num}s fadeout both;
+  @include position;
+  &__circle {
+    width: $load-size;
+    height: $load-size;
+    border-radius: $load-size;
+    animation: $load-dur loading-spinner ease-in-out infinite alternate;
+    &--1 {
+      background: $clr-pri;
+    }
+    &--2 {
+      background: $clr-sec;
+    }
+    &--3 {
+      background: $clr-ter;
+    }
+    @for $i from 1 through $load-num {
+      &--#{$i} {
+        animation-delay: $load-delay * $i;
+      }
+    }
+  }
+}
