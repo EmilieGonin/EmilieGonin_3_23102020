@@ -1,7 +1,10 @@
 //main:../main.scss
 .search {
   display: flex;
+  justify-content: center;
   background: $clr-form;
+  max-width: 1000px;
+  margin: auto;
   &__label {
     width: 30%;
     padding: 15px 0;
@@ -15,8 +18,11 @@
     width: 70%;
     padding: 15px 20px;
     border:  none;
-    background: inherit;
+    background: transparent;
     @include font-style($m);
+  }
+  @include laptop-only {
+    background: linear-gradient(to right, $clr-bg, $clr-form, $clr-bg);
   }
 }
 .operation {
