@@ -19,7 +19,7 @@
   }
   &__heading {
     padding: 0 $heading-padding;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     @include font-style($xl, $bold);
     &--menu {
       position: relative;
