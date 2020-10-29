@@ -32,11 +32,6 @@
   &__name {
     @include font-style($l-title);
   }
-  &__like {
-    top: 40px;
-    right: 40px;
-    @include like-button;
-  }
 }
 .loading-block {
   animation: ($load-block-dur + 100ms) slideY backwards, $load-block-dur fadein backwards;

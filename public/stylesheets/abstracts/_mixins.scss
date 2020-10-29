@@ -46,13 +46,3 @@
     @content;
   }
 }
-@mixin like-button {
-  position: absolute;
-  z-index: 2;
-  background: linear-gradient(black, blue);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  cursor: pointer;
-  @include font-style($xl);
-}

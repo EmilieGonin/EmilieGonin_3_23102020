@@ -1,0 +1,21 @@
+//main:../main.scss
+.like-button {
+  width: 26px;
+  height: 26px;
+  position: absolute;
+  z-index: 2;
+  cursor: pointer;
+  @include font-style($xl);
+  &--card {
+    top: 5px;
+    right: 10px;
+  }
+  &--menu {
+    top: 40px;
+    right: 40px;
+  }
+}
+
+//background: linear-gradient($clr-pri, $clr-sec);
+//background-clip: text;
+//-webkit-text-fill-color: transparent;

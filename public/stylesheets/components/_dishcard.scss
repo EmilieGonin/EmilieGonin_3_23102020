@@ -61,9 +61,5 @@
   }
   &__checkbox {
     display: none;
-    &:checked + .dishcard__added {
-      //width: 60px;
-      //transform: translateX(0px);
-    }
   }
 }

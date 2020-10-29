@@ -35,11 +35,6 @@
     margin: 5px 0;
     @include font-style(initial, $thin);
   }
-  &__like {
-    top: 5px;
-    right: 10px;
-    @include like-button;
-  }
   &__link {
     @include position;
   }
