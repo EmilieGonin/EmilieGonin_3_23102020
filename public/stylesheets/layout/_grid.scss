@@ -16,13 +16,4 @@
   gap: 20px;
   justify-items: center;
   justify-content: center;
-  @include tablet-only {
-    //grid-template-columns: repeat(2, $card-width);
-  }
-  @include laptop-only {
-    //grid-template-columns: repeat(3, $card-width);
-  }
-  @include laptop-hd-only {
-    //grid-template-columns: repeat(4, $card-width);
-  }
 }
