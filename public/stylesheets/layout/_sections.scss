@@ -51,6 +51,6 @@
   &__p {
     margin: 20px 0;
     padding: 0 10px;
-    @include font-style($l, $thin);
+    @include font-style($l, $light);
   }
 }

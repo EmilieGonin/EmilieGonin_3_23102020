@@ -33,7 +33,7 @@
   }
   &__location {
     margin: 5px 0;
-    @include font-style(initial, $thin);
+    @include font-style(initial, $light);
   }
   &__link {
     @include position;
