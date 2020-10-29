@@ -46,3 +46,8 @@ $load-dur: 400ms;
 $load-num: 3;
 $load-delay: $load-dur / $load-num;
 $load-random-num: random(3);
+
+//Menu loading block
+$load-block-dur: 1500ms;
+$load-block-num: 3;
+$load-block-delay: $load-block-dur / $load-block-num;
