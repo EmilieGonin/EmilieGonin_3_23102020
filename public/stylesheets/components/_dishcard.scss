@@ -4,7 +4,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 93%;
+  width: 95%;
   max-width: $menu-width;
   height: 70px;
   margin: auto;
@@ -17,7 +17,7 @@
   &__l-container {
     display: flex;
     height: inherit;
-    padding: 0 0 13px 12px;
+    padding: 0 0 13px 10px;
     overflow: hidden;
     text-overflow: ellipsis;
   }
@@ -25,14 +25,12 @@
     display: flex;
     justify-content: flex-end;
     height: inherit;
-    //width: 0px;
-    //transform: translateX(70px);
   }
   &__heading {
     position: absolute;
     top: 13px;
     margin: 0;
-    @include font-style($l, $medium);
+    @include font-style($l - 1px, $medium);
   }
   &__infos {
     align-self: flex-end;
@@ -44,20 +42,36 @@
   }
   &__price {
     align-self: flex-end;
-    margin: 0 20px 10px 10px;
+    width: 26px;
+    margin: 0 20px 10px 20px;
+    transition: all 500ms 100ms ease-in-out;
     @include font-style($m, $medium);
   }
   &__added {
-    width: 0px;
+    position: absolute;
+    right: 0;
+    width: 60px;
     line-height: 70px;
     background: $clr-ter;
     color: $clr-white;
     text-align: center;
     transform: translateX(60px);
-    transition: all 300ms ease-in;
+    transition: transform 600ms ease-in-out;
     @include font-style($l);
+  }
+  &__added i {
+    transition: all 600ms ease-in-out;
   }
   &__checkbox {
     display: none;
+    &:checked ~ .dishcard__price {
+      width: 90px;
+    }
+    &:checked ~ .dishcard__added {
+      transform: translateX(0);
+    }
+    &:checked ~ .dishcard__added i {
+      transform: rotate(2turn);
+    }
   }
 }
