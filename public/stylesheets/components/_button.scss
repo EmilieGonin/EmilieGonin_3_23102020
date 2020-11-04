@@ -11,7 +11,7 @@
   text-align: center;
   line-height: 50px;
   @include blur-shadow;
-  @include font-style(regular, $medium);
+  @include font-style(initial, $medium);
   &::after {
     content: "";
     @include position(absolute, 0);
@@ -26,5 +26,8 @@
     &::after {
       opacity: 1;
     }
+  }
+  &--menu {
+    margin: 15px auto 70px auto;
   }
 }

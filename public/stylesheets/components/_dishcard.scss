@@ -2,11 +2,10 @@
 .dishcard {
   position: relative;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  //justify-content: space-between;
   width: 95%;
   max-width: $menu-width;
-  height: 70px;
+  min-height: 70px;
   margin: auto;
   margin-bottom: 15px;
   border-radius: 20px;
@@ -15,43 +14,47 @@
   cursor: pointer;
   @include blur-shadow;
   &__l-container {
-    display: flex;
+    width: 100%;
+    display: block;
     height: inherit;
-    padding: 0 0 13px 10px;
+    padding: 13px 0 13px 13px;
+    //white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    transition: all 600ms ease-in-out;
   }
   &__r-container {
     display: flex;
     justify-content: flex-end;
-    height: inherit;
+    min-height: 70px;
   }
   &__heading {
-    position: absolute;
-    top: 13px;
+    overflow: hidden;
+    text-overflow: ellipsis;
     margin: 0;
-    @include font-style($l - 1px, $medium);
+    margin-bottom: 5px;
+    @include font-style($l, $medium);
   }
   &__infos {
-    align-self: flex-end;
-    margin: 0;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
     @include font-style($m, $light);
   }
   &__price {
     align-self: flex-end;
     width: 26px;
-    margin: 0 20px 10px 20px;
+    margin: 0 20px 10px 10px;
     transition: all 500ms 100ms ease-in-out;
     @include font-style($m, $medium);
   }
   &__added {
     position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     right: 0;
     width: 60px;
-    line-height: 70px;
     background: $clr-ter;
     color: $clr-white;
     text-align: center;
@@ -64,13 +67,16 @@
   }
   &__checkbox {
     display: none;
-    &:checked ~ .dishcard__price {
+    &:checked ~ span {
+      white-space: nowrap;
+    }
+    &:checked ~ span .dishcard__price {
       width: 90px;
     }
-    &:checked ~ .dishcard__added {
+    &:checked ~ span .dishcard__added {
       transform: translateX(0);
     }
-    &:checked ~ .dishcard__added i {
+    &:checked ~ span .dishcard__added i {
       transform: rotate(2turn);
     }
   }
