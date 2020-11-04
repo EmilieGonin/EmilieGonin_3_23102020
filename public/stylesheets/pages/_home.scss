@@ -22,7 +22,7 @@
     @include font-style($m);
   }
   @include laptop-only {
-    background: linear-gradient(to right, $clr-white, $clr-form, $clr-white);
+    background: linear-gradient(to right, $clr-bg, $clr-form, $clr-bg);
   }
 }
 .operation {
