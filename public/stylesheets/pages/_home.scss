@@ -1,24 +1,22 @@
 //main:../main.scss
 .search {
-  display: flex;
-  justify-content: center;
   background: $clr-form;
   max-width: 1000px;
   margin: auto;
+  @include flex($justify: center);
   &__label {
     width: 30%;
     padding: 15px 0;
     text-align: right;
-    cursor: pointer;
     &--hidden {
-      display: none;
+      @include reset(display);
     }
   }
   &__input {
     width: 70%;
     padding: 15px 20px;
-    border:  none;
     background: transparent;
+    @include reset(border);
     @include font-style($m);
   }
   @include laptop-only {
@@ -26,9 +24,8 @@
   }
 }
 .operation {
+  @include flex($align: center);
   transform: translateX(5px);
-  display: flex;
-  align-items: center;
   text-align: center;
   width: 90%;
   max-width: 320px;
@@ -36,12 +33,20 @@
   margin: 10px auto;
   border-radius: 25px;
   background: $clr-bg;
-  @include blur-shadow(0px, 5px, 15px, $clr-bg);
+  @include blur-shadow(0px, 5px, 15px);
   @include laptop-only {
     margin: 0 30px;
   }
   &--alt {
     background: fade-out($clr-pri, 0.85);
+  }
+  &__container {
+    @include flex($align: center);
+    flex-direction: column;
+    @include laptop-only {
+      flex-direction: row;
+      justify-content: center;
+    }
   }
   &__number {
     transform: translateX(-15px);

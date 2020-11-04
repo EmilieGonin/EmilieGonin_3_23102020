@@ -11,18 +11,18 @@ body, section, h1, h2 {
   margin: 0 auto;
 }
 body {
-  width: 100%;
   background: $clr-bg;
 }
 input {
-  outline: none;
+  @include reset(outline);
 }
 a {
   color: inherit;
-  text-decoration: none;
+  @include reset(text-decoration);
 }
 ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  @include reset(margin, padding, list-style);
+}
+label {
+  cursor: pointer;
 }

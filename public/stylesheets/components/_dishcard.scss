@@ -1,7 +1,7 @@
 //main:../main.scss
 .dishcard {
+  @include flex;
   position: relative;
-  display: flex;
   width: 95%;
   max-width: $menu-width;
   min-height: 70px;
@@ -21,8 +21,7 @@
     text-overflow: ellipsis;
   }
   &__r-container {
-    display: flex;
-    justify-content: flex-end;
+    @include flex($justify: flex-end);
     min-height: 70px;
   }
   &__text {
@@ -30,7 +29,7 @@
     max-height: 100px;
     overflow: hidden;
     text-overflow: ellipsis;
-    transition: all 600ms 600ms ease-in-out;
+    transition: all $added-dur $added-dur ease-in-out;
     @include font-style($m, $light);
     &--heading {
       margin-bottom: 5px;
@@ -41,31 +40,26 @@
     align-self: flex-end;
     width: 26px;
     margin: 0 20px 10px 10px;
-    transition: all 500ms 100ms ease-in-out;
+    transition: all ($added-dur - $added-delay) $added-delay ease-in-out;
     @include font-style($m, $medium);
   }
   &__added {
+    @include flex($justify: center, $align: center);
     position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    right: 0;
     width: 60px;
     background: $clr-ter;
     color: $clr-white;
     text-align: center;
     transform: translateX(60px);
-    transition: transform 600ms ease-in-out;
+    transition: transform $added-dur ease-in-out;
+    @include reset(top, bottom, right);
     @include font-style($l);
   }
   &__added i {
-    transition: all 600ms ease-in-out;
+    transition: all $added-dur ease-in-out;
   }
   &__checkbox {
-    display: none;
+    @include reset(display);
     &:checked ~ span {
       white-space: nowrap;
     }

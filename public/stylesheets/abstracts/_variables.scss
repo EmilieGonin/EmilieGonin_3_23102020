@@ -53,3 +53,11 @@ $load-random-num: random(3);
 $load-block-dur: 1500ms;
 $load-block-num: 3;
 $load-block-delay: $load-block-dur / $load-block-num;
+
+//Added button
+$added-dur: 600ms;
+$added-delay: 100ms;
+
+//Reset lists
+$reset0: (padding, margin, opacity, top, bottom, left, right);
+$resetnone: (background, display, border, list-style, text-decoration, outline);

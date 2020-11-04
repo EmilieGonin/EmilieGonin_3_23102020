@@ -14,8 +14,7 @@
     line-height: 25px;
     @include font-style($m);
     @include tablet-only {
-      display: flex;
-      justify-content: center;
+      @include flex($justify: center);
     }
   }
   &__link {
@@ -23,8 +22,7 @@
       margin: 0 10px;
     }
     &--with-icon {
-      display: flex;
-      align-items: center;
+      @include flex($align: center);
       & i {
         min-width: 25px;
         margin-right: 5px;

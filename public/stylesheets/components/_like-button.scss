@@ -4,11 +4,11 @@
   height: 26px;
   position: absolute;
   z-index: 2;
-  background: none;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 1px black;
   cursor: pointer;
+  @include reset(background);
   @include font-style($xl);
   &:hover:after {
     transform: scale(1);
@@ -16,18 +16,14 @@
   &:after {
     content: "\f004";
     z-index: 3;
-    position: absolute;
     transform: scale(0);
     transition: all 250ms ease-out;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
     background: linear-gradient($clr-pri, $clr-sec);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 1px transparent;
+    @include absolute0;
   }
   &--card {
     top: 5px;

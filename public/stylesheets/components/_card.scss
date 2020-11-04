@@ -20,6 +20,16 @@
     color: darken($clr-ter, 40%);
     @include font-style($s, $medium);
   }
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min-content, $card-width));
+    gap: 20px;
+    justify-items: center;
+    justify-content: center;
+    @include laptop-hd-only {
+      grid-template-columns: repeat(4, minmax(min-content, $card-width));
+    }
+  }
   &__picture img {
     width: $card-width;
     height: $card-picture-height;
@@ -39,6 +49,6 @@
     @include font-style(initial, $light);
   }
   &__link {
-    @include position;
+    @include absolute0;
   }
 }

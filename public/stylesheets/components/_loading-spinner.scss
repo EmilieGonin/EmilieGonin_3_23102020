@@ -1,9 +1,6 @@
 //main:../main.scss
 .loading-spinner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2px;
+  @include flex($justify: center, $align: center, $gap: 2px);
   z-index: 999;
   position: fixed;
   top: 0;

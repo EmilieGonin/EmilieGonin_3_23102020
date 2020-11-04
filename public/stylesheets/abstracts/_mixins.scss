@@ -1,10 +1,10 @@
 //main:../main.scss
-@mixin position($position: absolute, $top: 0, $right: $top, $bottom: $top, $left: $right) {
-  position: $position;
-  top: $top;
-  right: $right;
-  bottom: $bottom;
-  left: $left;
+@mixin absolute0 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 @mixin font-style($size: initial, $weight: normal) {
   @if ($size == $xl-title or $size == $l-title or $size == $s-title) {
@@ -54,5 +54,28 @@
 @mixin ultrahd-only {
   @media screen and (min-width: $fullhd-width) {
     @content;
+  }
+}
+@mixin flex($justify: 0, $align: 0, $gap: 0) {
+  display: flex;
+
+  @if ($justify != 0) {
+    justify-content: $justify;
+  }
+  @if ($align != 0) {
+    align-items: $align;
+  }
+  @if ($gap != 0) {
+    gap: $gap;
+  }
+}
+@mixin reset($args...) {
+  @each $arg in $args {
+    @if (index($reset0, $arg) != null) {
+      #{$arg}: 0;
+    }
+    @if (index($resetnone, $arg) != null) {
+      #{$arg}: none;
+    }
   }
 }
