@@ -9,7 +9,7 @@
   top: 0;
   width: 100%;
   height: 100%;
-  background: $clr-bg-sec;
+  background: $clr-bg;
   animation: 0s #{$load-random-num}s fadeout both;
   &__circle {
     width: $load-size;

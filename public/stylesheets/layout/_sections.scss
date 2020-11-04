@@ -1,6 +1,6 @@
 //main:../main.scss
 .section {
-  background: $clr-bg-sec;
+  background: $clr-bg;
   padding: 45px 0;
   &--centered {
     text-align: center;
@@ -9,7 +9,7 @@
     }
   }
   &--alt {
-    background: $clr-bg;
+    background: $clr-white;
   }
   &--menu {
     padding: 0 0 20px 0;

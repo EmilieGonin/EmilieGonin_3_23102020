@@ -22,7 +22,7 @@
     @include font-style($m);
   }
   @include laptop-only {
-    background: linear-gradient(to right, $clr-bg, $clr-form, $clr-bg);
+    background: linear-gradient(to right, $clr-white, $clr-form, $clr-white);
   }
 }
 .operation {
@@ -35,8 +35,8 @@
   height: 75px;
   margin: 10px auto;
   border-radius: 25px;
-  background: $clr-bg-sec;
-  @include blur-shadow(0px, 5px, 15px, $clr-bg-sec);
+  background: $clr-bg;
+  @include blur-shadow(0px, 5px, 15px, $clr-bg);
   @include laptop-only {
     margin: 0 30px;
   }
