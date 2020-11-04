@@ -2,7 +2,6 @@
 .dishcard {
   position: relative;
   display: flex;
-  //justify-content: space-between;
   width: 95%;
   max-width: $menu-width;
   min-height: 70px;
@@ -18,7 +17,6 @@
     display: block;
     height: inherit;
     padding: 13px 0 13px 13px;
-    //white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     transition: all 600ms ease-in-out;
@@ -29,6 +27,7 @@
     min-height: 70px;
   }
   &__heading {
+    display: block;
     overflow: hidden;
     text-overflow: ellipsis;
     margin: 0;
