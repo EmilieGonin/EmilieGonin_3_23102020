@@ -16,6 +16,16 @@
 @mixin blur-shadow($x: 0, $y: 1px, $blur: 10px, $color: $clr-bg-sec) {
   box-shadow: $x $y $blur darken($color, 15%);
 }
+@mixin mobile-xs-only {
+  @media screen and (max-width: $mobile-xs-width) {
+    @content;
+  }
+}
+@mixin mobile-xl-only {
+  @media screen and (max-width: $mobile-xl-width) {
+    @content;
+  }
+}
 @mixin mobile-tablet-only {
   @media screen and (max-width: $tablet-width) {
     @content;

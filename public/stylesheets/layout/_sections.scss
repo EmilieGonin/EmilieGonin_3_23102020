@@ -17,7 +17,7 @@
   &__heading {
     padding: 0 $heading-padding;
     margin-bottom: 20px;
-    max-width: $menu-width + 20px;
+    max-width: $menu-width + $heading-padding;
     @include font-style($xl, $bold);
     &--menu {
       position: relative;
@@ -41,13 +41,14 @@
       }
     }
     &--explore {
-      margin-bottom: 20px;
-      padding: 0 60px;
+      @include mobile-xl-only {
+        max-width: 300px;
+      }
     }
   }
   &__p {
     margin: 20px 0;
-    padding: 0 10px;
+    padding: 0 5px;
     @include font-style($l, $light);
   }
 }

@@ -36,5 +36,8 @@
   &--menu {
     top: 40px;
     right: 40px;
+    @include mobile-xs-only {
+      right: 10px;
+    }
   }
 }

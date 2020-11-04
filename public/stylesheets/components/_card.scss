@@ -6,6 +6,9 @@
   border-radius: 15px;
   overflow: hidden;
   @include blur-shadow;
+  @include mobile-xs-only {
+    width: 95%;
+  }
   &--new::before {
     content: "Nouveau";
     position: absolute;
