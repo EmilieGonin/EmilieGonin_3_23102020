@@ -19,7 +19,6 @@
     transform: scale(0);
     transition: all 250ms ease-out;
     background: linear-gradient($clr-pri, $clr-sec);
-    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 1px transparent;
