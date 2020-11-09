@@ -1,4 +1,22 @@
 //main:../main.scss
+@mixin font($size: null, $weight: null) {
+  @if ($size == $xl-title or $size == $l-title or $size == $s-title) {
+    font-family: $font-title;
+  }
+  @if ($size != null) {
+    font-size: $size;
+  }
+  @if ($weight != null) {
+    font-size: $weight;
+  }
+}
+@mixin section-heading {
+  margin-bottom: 20px;
+  max-width: $menu-width + $heading-padding;
+}
+@mixin shadow($x: 0, $y: 1px, $blur: 10px, $color: $clr-bg) {
+  box-shadow: $x $y $blur darken($color, 15%);
+}
 @mixin absolute0 {
   position: absolute;
   top: 0;
@@ -6,16 +24,34 @@
   bottom: 0;
   left: 0;
 }
-@mixin font-style($size: initial, $weight: normal) {
-  @if ($size == $xl-title or $size == $l-title or $size == $s-title) {
-    font-family: $font-title;
+@mixin flex($justify: null, $align: null, $gap: null, $direction: null) {
+  display: flex;
+
+  @if ($justify != null) {
+    justify-content: $justify;
   }
-  font-size: $size;
-  font-weight: $weight;
+  @if ($align != null) {
+    align-items: $align;
+  }
+  @if ($gap != null) {
+    gap: $gap;
+  }
+  @if ($direction != null) {
+    flex-direction: $direction;
+  }
 }
-@mixin blur-shadow($x: 0, $y: 1px, $blur: 10px, $color: $clr-bg) {
-  box-shadow: $x $y $blur darken($color, 15%);
+@mixin reset($args...) {
+  @each $arg in $args {
+    @if (index($reset0, $arg) != null) {
+      #{$arg}: 0;
+    }
+    @if (index($resetnone, $arg) != null) {
+      #{$arg}: none;
+    }
+  }
 }
+
+//***** Responsive *****//
 @mixin mobile-xs-only {
   @media screen and (max-width: $mobile-xs-width) {
     @content;
@@ -54,28 +90,5 @@
 @mixin ultrahd-only {
   @media screen and (min-width: $fullhd-width) {
     @content;
-  }
-}
-@mixin flex($justify: 0, $align: 0, $gap: 0) {
-  display: flex;
-
-  @if ($justify != 0) {
-    justify-content: $justify;
-  }
-  @if ($align != 0) {
-    align-items: $align;
-  }
-  @if ($gap != 0) {
-    gap: $gap;
-  }
-}
-@mixin reset($args...) {
-  @each $arg in $args {
-    @if (index($reset0, $arg) != null) {
-      #{$arg}: 0;
-    }
-    @if (index($resetnone, $arg) != null) {
-      #{$arg}: none;
-    }
   }
 }

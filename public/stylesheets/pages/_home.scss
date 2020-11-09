@@ -1,9 +1,45 @@
 //main:../main.scss
+.section-home {
+  padding: 45px 0;
+  &--centered {
+    text-align: center;
+    @include laptop-hd-only {
+      padding: 60px 0;
+    }
+  }
+  &--alt {
+    background: $clr-white;
+  }
+  &__heading {
+    padding: 0 $heading-padding;
+    @include section-heading;
+    @include font($xl, $bold);
+    &--centered {
+      @include tablet-only {
+        text-align: center;
+        margin-bottom: 50px;
+      }
+    }
+    &--explore {
+      @include mobile-xl-only {
+        max-width: 300px;
+      }
+    }
+  }
+  &__p {
+    margin: 20px 0;
+    padding: 0 5px;
+    @include font($l, $light);
+  }
+}
 .search {
   background: $clr-form;
   max-width: 1000px;
   margin: auto;
   @include flex($justify: center);
+  @include laptop-only {
+    background: linear-gradient(to right, $clr-bg, $clr-form, $clr-bg);
+  }
   &__label {
     width: 30%;
     padding: 15px 0;
@@ -17,14 +53,10 @@
     padding: 15px 20px;
     background: transparent;
     @include reset(border);
-    @include font-style($m);
-  }
-  @include laptop-only {
-    background: linear-gradient(to right, $clr-bg, $clr-form, $clr-bg);
+    @include font($m);
   }
 }
 .operation {
-  @include flex($align: center);
   transform: translateX(5px);
   text-align: center;
   width: 90%;
@@ -33,7 +65,8 @@
   margin: 10px auto;
   border-radius: 25px;
   background: $clr-bg;
-  @include blur-shadow(0px, 5px, 15px);
+  @include flex($align: center);
+  @include shadow(0px, 5px, 15px);
   @include laptop-only {
     margin: 0 30px;
   }
@@ -41,8 +74,7 @@
     background: fade-out($clr-pri, 0.85);
   }
   &__container {
-    @include flex($align: center);
-    flex-direction: column;
+    @include flex($align: center, $direction: column);
     @include laptop-only {
       flex-direction: row;
       justify-content: center;
@@ -55,19 +87,19 @@
     border-radius: 20px;
     background: $clr-pri;
     color: $clr-white;
-    @include font-style($s);
+    @include font($s);
   }
   &__icon {
     min-width: 20px;
     margin-left: 5px;
     margin-right: 20px;
     color: $clr-ico;
-    @include font-style($l, $bold);
+    @include font($l, $bold);
   }
   &__icon--alt {
     color: $clr-pri;
   }
   &__text {
-    @include font-style(initial, $medium);
+    @include font(null, $medium);
   }
 }

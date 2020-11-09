@@ -4,7 +4,7 @@
   color: $clr-white;
   padding: 25px;
   &__heading {
-    @include font-style($s-title);
+    @include font($s-title);
     @include tablet-only {
       text-align: center;
     }
@@ -12,7 +12,7 @@
   &__links {
     margin-top: 10px;
     line-height: 25px;
-    @include font-style($m);
+    @include font($m);
     @include tablet-only {
       @include flex($justify: center);
     }

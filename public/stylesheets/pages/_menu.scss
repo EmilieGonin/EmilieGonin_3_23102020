@@ -1,4 +1,23 @@
 //main:../main.scss
+.section-menu {
+  padding: 0 0 20px 0;
+  &__heading {
+    position: relative;
+    padding: 0 $heading-padding 8px $heading-padding;
+    text-transform: uppercase;
+    @include section-heading;
+    @include font($m, $light);
+    &::after {
+      content: "";
+      position: absolute;
+      left: 20px;
+      bottom: 0;
+      width: 40px;
+      height: 3px;
+      background: $clr-ter;
+    }
+  }
+}
 .presentation {
   position: relative;
   height: 300px;
@@ -30,14 +49,6 @@
     }
   }
   &__name {
-    @include font-style($l-title);
-  }
-}
-.loading-block {
-  animation: ($load-block-dur + 100ms) slideY backwards, $load-block-dur fadein backwards;
-  @for $i from 1 through $load-block-num {
-    &--#{$i} {
-      animation-delay: $load-block-delay * $i;
-    }
+    @include font($l-title);
   }
 }

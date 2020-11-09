@@ -11,7 +11,15 @@
   overflow: hidden;
   background: $clr-white;
   cursor: pointer;
-  @include blur-shadow;
+  @include shadow;
+  &__block {
+    animation: ($load-block-dur + 100ms) slideY backwards, $load-block-dur fadein backwards;
+    @for $i from 1 through $load-block-num {
+      &--#{$i} {
+        animation-delay: $load-block-delay * $i;
+      }
+    }
+  }
   &__l-container {
     width: 100%;
     display: block;
@@ -30,10 +38,10 @@
     overflow: hidden;
     text-overflow: ellipsis;
     transition: all $added-dur $added-dur ease-in-out;
-    @include font-style($m, $light);
+    @include font($m, $light);
     &--heading {
       margin-bottom: 5px;
-      @include font-style($l, $medium);
+      @include font($l, $medium);
     }
   }
   &__price {
@@ -41,7 +49,7 @@
     width: 26px;
     margin: 0 20px 10px 10px;
     transition: all ($added-dur - $added-delay) $added-delay ease-in-out;
-    @include font-style($m, $medium);
+    @include font($m, $medium);
   }
   &__added {
     @include flex($justify: center, $align: center);
@@ -53,7 +61,7 @@
     transform: translateX(60px);
     transition: transform $added-dur ease-in-out;
     @include reset(top, bottom, right);
-    @include font-style($l);
+    @include font($l);
   }
   &__added i {
     transition: all $added-dur ease-in-out;

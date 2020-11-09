@@ -5,7 +5,7 @@
   width: $card-width;
   border-radius: 15px;
   overflow: hidden;
-  @include blur-shadow;
+  @include shadow;
   @include mobile-xs-only {
     width: 95%;
   }
@@ -18,7 +18,7 @@
     line-height: 30px;
     background: $clr-ter;
     color: darken($clr-ter, 40%);
-    @include font-style($s, $medium);
+    @include font($s, $medium);
   }
   &__container {
     display: grid;
@@ -34,7 +34,6 @@
     width: $card-width;
     height: $card-picture-height;
     object-fit: cover;
-    -o-object-fit: cover;
   }
   &__text {
     position: relative;
@@ -46,7 +45,7 @@
   }
   &__location {
     margin: 5px 0;
-    @include font-style(initial, $light);
+    @include font(null, $light);
   }
   &__link {
     @include absolute0;
