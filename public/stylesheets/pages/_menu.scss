@@ -43,7 +43,7 @@
     border-radius: 40px 40px 0 0;
     line-height: 65px;
     background: $clr-bg;
-    @include laptop-only {
+    @include tablet-only {
       left: 50%;
       transform: translateX(-50%);
     }
