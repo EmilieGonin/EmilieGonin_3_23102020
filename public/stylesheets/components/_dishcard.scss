@@ -13,7 +13,8 @@
   cursor: pointer;
   @include shadow;
   &__block {
-    animation: ($load-block-dur + 100ms) slideY backwards, $load-block-dur fadein backwards;
+    animation: ($load-block-dur + 100ms) slideY backwards,
+    $load-block-dur fadein backwards;
     @for $i from 1 through $load-block-num {
       &--#{$i} {
         animation-delay: $load-block-delay * $i;
