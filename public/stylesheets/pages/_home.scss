@@ -100,6 +100,6 @@
     color: $clr-pri;
   }
   &__text {
-    @include font(null, $medium);
+    @include font($weight: $medium);
   }
 }

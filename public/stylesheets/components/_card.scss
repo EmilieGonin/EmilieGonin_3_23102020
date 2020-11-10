@@ -45,7 +45,7 @@
   }
   &__location {
     margin: 5px 0;
-    @include font(null, $light);
+    @include font($weight: $light);
   }
   &__link {
     @include absolute0;

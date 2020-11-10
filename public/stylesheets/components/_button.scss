@@ -11,7 +11,7 @@
   text-align: center;
   line-height: 50px;
   @include shadow;
-  @include font(null, $medium);
+  @include font($weight: $medium);
   &::after {
     content: "";
     @include absolute0;
